@@ -27,10 +27,16 @@
   </header>
   <main>
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div id="app"></div>
-        </div>
+      <div id="" class="row">
+        <section>
+          <form onsubmit="app.PlayersController.createPlayer()" class="bg-white rounded p-3">
+            <div class="col-4">
+              <input type="text" name="name" placeholder="player name" id="name" class="form-control" minlength="3" maxlength="12" required>
+              <button type="submit" class="btn btn-info">Add</button>
+            </div>
+          </form>
+        </section>
+          
       </div>
     </div>
   </main>
