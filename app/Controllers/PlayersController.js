@@ -14,11 +14,17 @@ function _drawPlayers() {
     setHTML('list', template)
 }
 
+function _drawActivePlayer(playerId) {
+    console.log('_drawActivePlayer playerId: ', playerId)
+    setHTML('activePlayerScoreBoard', appState.activePlayer.ActivePlayerTemplate)
+}
+
 
 
 export class PlayersController {
     constructor() {
         console.log('player loaded');
+        appState.on('activePlayer', _drawPlayers)
 
     }
 
@@ -36,7 +42,7 @@ export class PlayersController {
     setActivePlayer(playerId) {
         console.log('set active player', playerId)
         playersService.setActivePlayer(playerId)
-        // TODO - redraw the players to show/highlight the active player
+        _drawActivePlayer(playerId)
 
     }
 
