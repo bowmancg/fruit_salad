@@ -19,12 +19,18 @@ function _drawCurrentFruit() {
     setHTML("current-fruit", appState.currentFruit)
     console.log('current fruit');
 }
+function _drawActivePlayer(playerId) {
+    console.log('_drawActivePlayer playerId: ', playerId)
+    setHTML('activePlayerScoreBoard', appState.activePlayer.ActivePlayerTemplate)
+}
+
 
 
 export class PlayersController {
     constructor() {
         console.log('player loaded');
-        
+        appState.on('activePlayer', _drawPlayers)
+
     }
 
     createPlayer() {
@@ -58,6 +64,8 @@ export class PlayersController {
         playersService.setActivePlayer(playerId)
         // TODO - redraw the players to show/highlight the active player
         
+        _drawActivePlayer(playerId)
+
     }
 
 }

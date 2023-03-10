@@ -54,13 +54,18 @@
 
         <!-- SECTION - Game area -->
         <div class="col-8">
-          <p>This is the game area</p>
+          <div class="row">
+            <div class="col" id="activePlayerScoreBoard"></div>
+          </div>
+          <div class="row">
+            <div class="col">This is the play area</div>
+          </div>
         </div>
 
 
         <div class="col-4">
           <!-- SECTION - List Players -->
-          <div class="card" id="list">
+          <div class="card mb-1" id="list">
             <!-- <div class="d-flex justify-content-around btn playerInList p-2"
               onClick="app.playersController.setActivePlayer('${this.id}')">
               <div class="col-4">${this.name}</div>
@@ -69,7 +74,7 @@
           </div>
 
           <!-- SECTION - Player form -->
-          <form onsubmit="app.playersController.createPlayer()" class="bg-white rounded p-3" id="playerForm">
+          <form onsubmit="app.playersController.createPlayer()" class="bg-white rounded p-3 mt-1" id="playerForm">
             <div class="text-end">
               <input type="text" name="name" placeholder="player name" id="name" class="form-control" minlength="3"
                 maxlength="12" required>

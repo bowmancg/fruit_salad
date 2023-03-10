@@ -16,4 +16,11 @@ export class Player {
         <div class="col-4">${this.score}</div>
     </div>`
     }
+    get ActivePlayerTemplate() {
+        return `
+        <div class="d-flex justify-content-around rounded bg-light p-2">
+        <div class="col-4"><h4>${this.name}</h4></div>
+        <div class="col-4"><h4>${this.score}</h4></div>
+    </div>`
+    }
 }
