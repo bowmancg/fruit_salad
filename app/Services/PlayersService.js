@@ -7,6 +7,7 @@ class PlayersService {
     setActivePlayer(playerId) {
         let foundPlayer = appState.players.find(p => p.id == playerId)
         appState.activePlayer = foundPlayer
+        console.log('set Active Player service: ', appState.activePlayer)
     }
 
     createPlayer(formData) {
@@ -14,7 +15,7 @@ class PlayersService {
         appState.players.push(player)
         console.log('player service', appState.players);
         appState.emit('players')
-        appState.activePlayer = appState.players.find(p => p.id == player.id)
+        //appState.activePlayer = appState.players.find(p => p.id == player.id)
         console.log('active player: ', appState.activePlayer)
     }
 }

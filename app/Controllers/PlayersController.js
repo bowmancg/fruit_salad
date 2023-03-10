@@ -29,8 +29,15 @@ export class PlayersController {
         let newPlayer = getFormData(form)
         console.log(newPlayer);
         playersService.createPlayer(newPlayer)
-
+        document.getElementById("playerForm").reset(); // clears/resets the form
         _drawPlayers()
+    }
+
+    setActivePlayer(playerId) {
+        console.log('set active player', playerId)
+        playersService.setActivePlayer(playerId)
+        // TODO - redraw the players to show/highlight the active player
+
     }
 
 }

@@ -15,7 +15,25 @@
   <title>fruit_salad</title>
 </head>
 
-<body>
+<style>
+  body.debug .container,
+  body.debug .container-fluid {
+    outline: 2px double blue;
+    outline-offset: -2px;
+  }
+
+  body.debug .row {
+    outline: 2px dashed red;
+    outline-offset: -2px;
+  }
+
+  body.debug [class*="col-"] {
+    outline: 2px dotted forestgreen;
+    outline-offset: -3px;
+  }
+</style>
+
+<body class="de bug">
   <header>
     <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
       <a class="navbar-brand ms-3" href="#">
@@ -43,11 +61,15 @@
         <div class="col-4">
           <!-- SECTION - List Players -->
           <div class="card" id="list">
-            <p>list player</p>
+            <!-- <div class="d-flex justify-content-around btn playerInList p-2"
+              onClick="app.playersController.setActivePlayer('${this.id}')">
+              <div class="col-4">${this.name}</div>
+              <div class="col-4">${this.score}</div>
+            </div> -->
           </div>
 
           <!-- SECTION - Player form -->
-          <form onsubmit="app.playersController.createPlayer()" class="bg-white rounded p-3">
+          <form onsubmit="app.playersController.createPlayer()" class="bg-white rounded p-3" id="playerForm">
             <div class="text-end">
               <input type="text" name="name" placeholder="player name" id="name" class="form-control" minlength="3"
                 maxlength="12" required>

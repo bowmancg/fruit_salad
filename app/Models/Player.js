@@ -9,9 +9,11 @@ export class Player {
         this.score = 0
     }
     get ListTemplate() {
-        return `<div class="card" id="list">
-        <p>${this.name}</p>
-        <p>${this.score}</p>
-        </div>`
+        return `
+    <div class="d-flex justify-content-around btn playerInList p-2"
+        onClick="app.playersController.setActivePlayer('${this.id}')">
+        <div class="col-4">${this.name}</div>
+        <div class="col-4">${this.score}</div>
+    </div>`
     }
 }

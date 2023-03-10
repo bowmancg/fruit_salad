@@ -1,1 +1,12 @@
 /* BASIC STYLES HERE */
+
+body {
+  background-image: url(../img/fruitBackground.png);
+  background-position: left;
+  background-size: center;
+}
+
+.playerInList:hover {
+  cursor: pointer;
+  background-color: #ECC64A;
+}
