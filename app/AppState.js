@@ -1,4 +1,5 @@
 import { Player } from "./Models/Player.js"
+import { playersService } from "./Services/PlayersService.js"
 import { Value } from "./Models/Value.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
@@ -9,9 +10,9 @@ class AppState extends EventEmitter {
   // values = loadState('values', [Value])
 
   /** @type {import('./Models/Player').Player[]} */
+  activePlayer = null
+  players = []
 
-    players = []
-  
 
 
 }

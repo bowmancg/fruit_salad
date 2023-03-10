@@ -1,3 +1,4 @@
+import { appState } from "../AppState.js";
 import { generateId } from "../Utils/generateId.js";
 
 
@@ -8,6 +9,9 @@ export class Player {
         this.score = 0
     }
     get ListTemplate() {
-        return `<li>${this.name}</li>`
+        return `<div class="card" id="list">
+        <p>${this.name}</p>
+        <p>${this.score}</p>
+        </div>`
     }
 }

@@ -27,17 +27,38 @@
   </header>
   <main>
     <div class="container-fluid">
-      <div id="" class="row">
-        <section>
-          <form onsubmit="app.PlayersController.createPlayer()" class="bg-white rounded p-3">
-            <div class="col-4">
-              <input type="text" name="name" placeholder="player name" id="name" class="form-control" minlength="3" maxlength="12" required>
+      <div class="row">
+        <div class="col-3">
+          <h1>Fruit Salad</h1>
+        </div>
+      </div>
+      <div class="row">
+
+        <!-- SECTION - Game area -->
+        <div class="col-8">
+          <p>This is the game area</p>
+        </div>
+
+
+        <div class="col-4">
+          <!-- SECTION - List Players -->
+          <div class="card" id="list">
+            <p>list player</p>
+          </div>
+
+          <!-- SECTION - Player form -->
+          <form onsubmit="app.playersController.createPlayer()" class="bg-white rounded p-3">
+            <div class="text-end">
+              <input type="text" name="name" placeholder="player name" id="name" class="form-control" minlength="3"
+                maxlength="12" required>
               <button type="submit" class="btn btn-info">Add</button>
             </div>
           </form>
-        </section>
-          
+        </div>
       </div>
+
+
+
     </div>
   </main>
   <footer class="bg-dark text-light">
